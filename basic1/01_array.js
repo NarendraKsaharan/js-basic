@@ -88,9 +88,20 @@
 
 // 6.every()
 
-// let arr3 = [2, 4, 6, 8, 10];
-// let isEven = arra3.every(element => element % 2 === 0);
-// console.log(isEven); // Output: true
+// let numbers = [1, 2, 3, 4, 5];
+
+// // Check if all elements are greater than 0
+// let result1 = numbers.every(function(element) {
+//     return element > 0;
+// });
+// console.log(result1); // Output: true
+
+// // Check if all elements are even
+// let result2 = numbers.every(function(element) {
+//     return element % 2 === 0;
+// });
+// console.log(result2); // Output: false
+
 
 // let temperatures = [25, 28, 22, 30, 26];
 
@@ -113,6 +124,21 @@
 // let newArray1 = arr5.filter(element => element % 2 === 0);
 // console.log(newArray1); // Output: [2, 4]
 
+// let numbers = [1, 2, 3, 4, 5];
+
+// // Filter out even numbers
+// let evenNumbers = numbers.filter(function(element) {
+//     return element % 2 === 0;
+// });
+// console.log(evenNumbers); // Output: [2, 4]
+
+// // Filter out numbers greater than 2
+// let greaterThanTwo = numbers.filter(function(element) {
+//     return element > 2;
+// });
+// console.log(greaterThanTwo); // Output: [3, 4, 5]
+
+
 // 9. find()
 // let arr6 = [1, 2, 3, 4, 5];
 // let found = arr6.find(element => element > 2);
@@ -122,6 +148,21 @@
 
 // let result = numbers.find(num => num > 8);
 // console.log(result); // Output: 12  this find first elemnt from start 
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// // Find the first even number
+// let evenNumber = numbers.find(function(element) {
+//     return element % 2 === 0;
+// });
+// console.log(evenNumber); // Output: 2
+
+// // Find the first number greater than 3
+// let greaterThanThree = numbers.find(function(element) {
+//     return element > 3;
+// });
+// console.log(greaterThanThree); // Output: 4
+
 
 // 10. findIndex()
 // let arr7 = [1, 2, 3, 4, 5];
@@ -134,10 +175,25 @@
 // let index1 = numbers.findIndex(num => num > 10);
 // console.log(index1); // Output: 2  //return first elemnt index who fulfill condition
 
+// let numbers = [1, 2, 3, 4, 5];
+
+// // Find the index of the first even number
+// let evenIndex = numbers.findIndex(function(element) {
+//     return element % 2 === 0;
+// });
+// console.log(evenIndex); // Output: 1
+
+// // Find the index of the first number greater than 3
+// let greaterThanThreeIndex = numbers.findIndex(function(element) {
+//     return element > 3;
+// });
+// console.log(greaterThanThreeIndex); // Output: 3
+
+
 // 11. findLast()
 // let arr8 = [1, 2, 3, 4, 5];
 // let found = arr8.findLast(element => element > 2);
-// console.log(found); // Output: 5  eturns the last element that satisfies the condition.
+// console.log(found); // Output: 5  returns the last element that satisfies the condition.
 
 
 // 12. findLastIndex()
@@ -149,6 +205,18 @@
 // let arr10 = [1, 2, 3, 4, 5];
 // console.log(arr10.indexOf(3)); // Output: 2
 // console.log(arr10.indexOf(6)); // Output: -1  // index where elemnt located
+
+// let fruits = ['apple', 'banana', 'orange', 'apple', 'mango'];
+
+// let index1 = fruits.indexOf('apple');
+// console.log(index1); // Output: 0 (Index of the first occurrence of 'apple')
+
+// let index2 = fruits.indexOf('apple', 1);
+// console.log(index2); // Output: 3 (Index of the first occurrence of 'apple' after index 1)
+
+// let index3 = fruits.indexOf('grape');
+// console.log(index3); // Output: -1 ('grape' does not exist in the array)
+
 
 // 14. lastIndexOf()
 // let arr11 = [1, 2, 3, 4, 5, 3];
@@ -173,17 +241,38 @@
 // let newArray3 = arr13.flat();
 // console.log(newArray3); // Output: [1, 2, 3, 4]
 
+// let nestedArray = [1, 2, [3, 4, [5, 6]]];
+// let flatArray = nestedArray.flat();
+// console.log(flatArray); // Output: [1, 2, 3, 4, [5, 6]]
+
+// let deeplyNestedArray = [1, 2, [3, 4, [5, 6]]];
+// let deeplyFlatArray = deeplyNestedArray.flat(2);
+// console.log(deeplyFlatArray); // Output: [1, 2, 3, 4, 5, 6]
+
+
 // 17. flatMap()
 
 // let arr14 = [1, 2, 3];
 // let newArray4 = arr14.flatMap(x => [x, x * 2]);
 // console.log(newArray4); // Output: [1, 2, 2, 4, 3, 6] first 1 and 1*2, 2& 2*2, 3, 3*2
 
+// let arr = [1, 2, 3];
+
+// let mapped = arr.flatMap(x => [x * 2]);
+// console.log(mapped); // Output: [2, 4, 6]
+
 // 18. Map()
 
 // let arr15 = [1, 2, 3];
 // let newArra5 = arr15.map(element => element * 2);
 // console.log(newArra5); // Output: [2, 4, 6]
+
+// let words = ['hello', 'world'];
+
+// let lengths = words.map(function(word) {
+//     return word.length;
+// });
+// console.log(lengths); // Output: [5, 5]
 
 // 19. foreach()
 
@@ -196,11 +285,35 @@
 // b
 // c
 
+// let numbers = [1, 2, 3, 4, 5];
+
+// numbers.forEach(function(element) {
+//     console.log(element * 2);
+// });
+// Output:
+// 2
+// 4
+// 6
+// 8
+// 10
+
 // 20. includes()
 
 // let arr17 = [1, 2, 3];
 // console.log(arr17.includes(2)); // Output: true
 // console.log(arr17.includes(4)); // Output: false
+
+// let fruits = ['apple', 'banana', 'orange'];
+
+// let hasApple = fruits.includes('apple');
+// console.log(hasApple); // Output: true
+
+// let hasGrape = fruits.includes('grape');
+// console.log(hasGrape); // Output: false
+
+// let hasBananaFromIndex = fruits.includes('banana', 1);
+// console.log(hasBananaFromIndex); // Output: true
+
 
 // 21. join()
 
@@ -287,15 +400,40 @@
 // arr29.splice(2, 0, 6); // index se start karke 0 elements remove kiye aur 6 add kiya
 // console.log(arr29); // Output: [1, 2, 6, 3, 4, 5]
 
+// let fruits = ['apple', 'banana', 'orange', 'grape', 'mango'];
+
+// let removedItems = fruits.splice(2, 2, 'kiwi', 'pear');
+// console.log(removedItems); // Output: ['orange', 'grape']
+// console.log(fruits); // Output: ['apple', 'banana', 'kiwi', 'pear', 'mango']
+
+
 // 34. some()
 // let arr30 = [1, 2, 3, 4, 5];
 // let isEven = arr30.some(element => element % 2 === 0);
 // console.log(isEven); // Output: true
 
+// let hasNegative = arr30.some(function(element) {
+//     return element > 5;
+// });
+// console.log(hasNegative); // Output: false
+
 // 35. sort()
 // let arr31 = [3, 1, 2];
 // arr31.sort();
 // console.log(arr31); // Output: [1, 2, 3]
+
+// let fruits = ['banana', 'apple', 'orange'];
+
+// fruits.sort();
+// console.log(fruits); // Output: ['apple', 'banana', 'orange']
+
+// let numbers = [4, 2, 5, 1, 3];
+
+// numbers.sort(function(a, b) {
+//     return a - b;
+// });
+// console.log(numbers); // Output: [1, 2, 3, 4, 5]
+
 
 // 36. toString()
 // let arr32 = [1, 2, 3];
